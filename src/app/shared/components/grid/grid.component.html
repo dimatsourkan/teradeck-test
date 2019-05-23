@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-divider align-middle">
+
+    <span>{{ title }}</span>
+
+    <form [formGroup]="filterForm">
+
+      <input type="text" formControlName="search">
+
+      <select name="" id="" formControlName="sort" *ngIf="sortableFields.length">
+        <option value=""></option>
+        <ng-container *ngFor="let item of sortableFields">
+          <option value="{{ item.value }}.ASC">Sort by {{ item.name }} AZ</option>
+          <option value="{{ item.value }}.DESC">Sort by {{ item.name }} ZA</option>
+        </ng-container>
+      </select>
+
+    </form>
+
+  </div>
+
+  <div class="card-section" #content></div>
+</div>

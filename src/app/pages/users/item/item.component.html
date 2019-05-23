@@ -1,0 +1,29 @@
+<div class="card" *ngIf="user">
+  <div class="card-divider">
+    User : {{ user.firstName }} {{ user.lastName }}
+  </div>
+  <div class="card-section">
+    <table>
+      <tr>
+        <td>Id</td>
+        <td>{{ user.id }}</td>
+      </tr>
+      <tr>
+        <td>First Name</td>
+        <td>{{ user.firstName }}</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>{{ user.lastName }}</td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td>{{ user.phone }}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{ user.address }}</td>
+      </tr>
+    </table>
+  </div>
+</div>

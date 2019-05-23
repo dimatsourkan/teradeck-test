@@ -1,0 +1,21 @@
+<app-grid
+  title="Users list"
+  [data]="users"
+  [template]="template"
+  [searchFields]="searchFields"
+  [sortableFields]="sortableFields">
+
+<!-- Грид может принимать любые темплейты, прогнать данные и отрисовать -->
+  <ng-template #template let-user>
+    <table>
+      <tr [routerLink]="['/users', user.id]">
+        <td>Id: {{ user.id }}</td>
+        <td>First Name: {{ user.firstName }}</td>
+        <td>Last Name: {{ user.lastName }}</td>
+        <td>Phone: {{ user.phone }}</td>
+        <td>Address: {{ user.address }}</td>
+      </tr>
+    </table>
+  </ng-template>
+
+</app-grid>
